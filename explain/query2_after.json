@@ -1,0 +1,66 @@
+{
+                restoreState: 10,
+                isEOF: 1,
+                keyPattern: {
+                  _fts: 'text',
+                  _ftsx: 1
+                },
+                indexName: 'subject_text_description_text_tags_text',
+                isMultiKey: true,
+                isUnique: false,
+                isSparse: false,
+                isPartial: false,
+                indexVersion: 2,
+                direction: 'backward',
+                indexBounds: {},
+                keysExamined: 10000,
+                seeks: 1,
+                dupsTested: 10000,
+                dupsDropped: 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  queryShapeHash: '0A2FB63952D80CF23D155B4E8710C05483E6F4A06BC35374D2BD9C9B77F5A384',
+  command: {
+    find: 'tickets',
+    filter: {
+      '$text': {
+        '$search': 'refund delayed response'
+      }
+    },
+    sort: {
+      score: {
+        '$meta': 'textScore'
+      }
+    },
+    projection: {
+      score: {
+        '$meta': 'textScore'
+      }
+    },
+    '$db': 'dexkor'
+  },
+  serverInfo: {
+    host: 'NANI',
+    port: 27017,
+    version: '8.0.4',
+    gitVersion: 'bc35ab4305d9920d9d0491c1c9ef9b72383d31f9'
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 104857600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 104857600,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: 'trySbeRestricted',
+    internalQueryPlannerIgnoreIndexWithCollationForRegex: 1
+  },
+  ok: 1
+}

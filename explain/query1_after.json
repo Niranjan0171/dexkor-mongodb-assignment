@@ -1,0 +1,54 @@
+{
+              '["tenant_1", "tenant_1"]'
+            ],
+            status: [
+              '["open", "open"]'
+            ],
+            createdAt: [
+              '[new Date(9223372036854775807), new Date(1704067200000)]'
+            ]
+          },
+          keysExamined: 0,
+          seeks: 1,
+          dupsTested: 0,
+          dupsDropped: 0
+        }
+      }
+    }
+  },
+  queryShapeHash: 'F20EF9B5CF38C17AFBB75450395000F8BCE108B95BB03B6B97FC44052D3896AB',
+  command: {
+    find: 'tickets',
+    filter: {
+      tenantId: 'tenant_1',
+      status: 'open',
+      createdAt: {
+        '$gte': 2024-01-01T00:00:00.000Z
+      }
+    },
+    sort: {
+      createdAt: -1
+    },
+    limit: 20,
+    '$db': 'dexkor'
+  },
+  serverInfo: {
+    host: 'NANI',
+    port: 27017,
+    version: '8.0.4',
+    gitVersion: 'bc35ab4305d9920d9d0491c1c9ef9b72383d31f9'
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 104857600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 104857600,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: 'trySbeRestricted',
+    internalQueryPlannerIgnoreIndexWithCollationForRegex: 1
+  },
+  ok: 1
+}

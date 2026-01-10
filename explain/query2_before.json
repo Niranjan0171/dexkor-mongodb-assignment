@@ -1,0 +1,64 @@
+{
+    winningPlan: {
+      isCached: false,
+      stage: 'COLLSCAN',
+      filter: {
+        description: BSONRegExp('refund', 'i')
+      },
+      direction: 'forward'
+    },
+    rejectedPlans: []
+  },
+  executionStats: {
+    executionSuccess: true,
+    nReturned: 10000,
+    executionTimeMillis: 48,
+    totalKeysExamined: 0,
+    totalDocsExamined: 50000,
+    executionStages: {
+      isCached: false,
+      stage: 'COLLSCAN',
+      filter: {
+        description: BSONRegExp('refund', 'i')
+      },
+      nReturned: 10000,
+      executionTimeMillisEstimate: 41,
+      works: 50001,
+      advanced: 10000,
+      needTime: 40000,
+      needYield: 0,
+      saveState: 2,
+      restoreState: 2,
+      isEOF: 1,
+      direction: 'forward',
+      docsExamined: 50000
+    }
+  },
+  queryShapeHash: '713A1E4C0AE0CDC9FE6DE9F3F8E00A76910C24F6826127BC68449D75042795F1',
+  command: {
+    find: 'tickets',
+    filter: {
+      description: BSONRegExp('refund', 'i')
+    },
+    '$db': 'dexkor'
+  },
+  serverInfo: {
+    host: 'NANI',
+    port: 27017,
+    version: '8.0.4',
+    gitVersion: 'bc35ab4305d9920d9d0491c1c9ef9b72383d31f9'
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 104857600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 104857600,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: 'trySbeRestricted',
+    internalQueryPlannerIgnoreIndexWithCollationForRegex: 1
+  },
+  ok: 1
+}
