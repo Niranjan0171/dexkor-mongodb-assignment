@@ -267,15 +267,8 @@ Although regex may appear faster on small datasets, it does not scale and become
 
 For advanced search features such as autocomplete and fuzzy search, MongoDB Atlas Search (Lucene-based) is recommended in production systems.
 
-## 6. Repository Structure
 
-queries/          MongoDB queries used
-indexes/          Index definitions (createIndex commands)
-explain/          Before and after explain() execution outputs
-text-search/      Full-text search queries
-README.md         Assignment explanation
-
-## 7. Summary & Learnings
+## 6. Summary & Learnings
 
 - Identified slow MongoDB queries using explain()
 - Eliminated collection scans with compound and multikey indexes
